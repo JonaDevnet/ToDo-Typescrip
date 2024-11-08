@@ -1,29 +1,30 @@
 import React from "react";
-import { type ListOfTodos } from "../types";
+import { type ListOfTodos, ToggleTodo, RemoveTodo } from "../types";
 import { Todo } from "./Todo";
 
 interface Props {
-    todos: ListOfTodos;
-    onRemoveTodo: (id: number) => void;
+  todos: ListOfTodos;
+  onRemoveTodo: RemoveTodo;
+  onToggleCompleted: ToggleTodo;
 }
 
-export const Todos: React.FC<Props> = ({ todos, onRemoveTodo }) => {
-    return (
-        <ul className="todo-list">
-            {todos.map(todo => (
-                <li 
-                    key={todo.id} 
-                    className={`${todo.completed ? 'completed' : ''}`}
-                    >
-                    <Todo 
-                        key={todo.id}
-                        id={todo.id}
-                        title={todo.title}
-                        completed={todo.completed}
-                        onRemoveTodo={id => {onRemoveTodo(id)} }
-                    />
-                </li>
-            ))}
-        </ul>
-    )
-}
+export const Todos: React.FC<Props> = ({ todos, onRemoveTodo, onToggleCompleted }) => {
+  return (
+    <ul className="todo-list">
+      {todos.map(todo => (
+        <li 
+          key={todo.id} 
+          className={`${todo.completed ? 'completed' : ''}`}
+        >
+          <Todo 
+            id={todo.id}
+            title={todo.title}
+            completed={todo.completed}
+            onRemoveTodo={onRemoveTodo}
+            onToggleCompleted={onToggleCompleted}
+          />
+        </li>
+      ))}
+    </ul>
+  );
+};
