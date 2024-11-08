@@ -2,9 +2,21 @@ import React, { useState } from "react";
 import { Todos } from "./components/ToDos";
 
 const mockTodos = [
-  { id: 1, title: 'todo 1', completed: true },
-  { id: 2, title: 'todo 2', completed: false },
-  { id: 3, title: 'todo 3', completed: false }
+  { 
+    id: 1, 
+    title: 'Terminar curso TS', 
+    completed: true 
+  },
+  { 
+    id: 2, 
+    title: 'Terminar ToDo', 
+    completed: false 
+  },
+  { 
+    id: 3, 
+    title: 'Commit ToDo', 
+    completed: false 
+  }
 ];
 
 const App: React.FC = () => {
