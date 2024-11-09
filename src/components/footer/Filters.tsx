@@ -1,6 +1,6 @@
 import React from "react";
-import { FILTERS_BUTTONS } from "../../const";
-import { FilterValue } from "../types";
+import { FILTERS_BUTTONS } from "../../const/const";
+import { FilterValue } from "../../types";
 
 interface Props {
     onFilterChange: (filter: FilterValue) => void;

@@ -1,5 +1,5 @@
 import React from "react";
-import { type ListOfTodos, ToggleTodo, RemoveTodo } from "../types";
+import { type ListOfTodos, ToggleTodo, RemoveTodo } from "../../types";
 import { Todo } from "./Todo";
 
 interface Props {
