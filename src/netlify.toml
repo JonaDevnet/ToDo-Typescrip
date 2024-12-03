@@ -1,0 +1,3 @@
+[build]
+  command = "cross-env CI=false npm run build"
+  publish = "build"

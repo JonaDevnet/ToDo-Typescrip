@@ -66,7 +66,7 @@ const App: React.FC = () => {
         id: crypto.randomUUID(),
         completed: false
       }
-      const newTodos = [... todos, newTodo]
+      const newTodos = [...todos, newTodo]
       setTodos(newTodos)
    }
 
